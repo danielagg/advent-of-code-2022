@@ -1,14 +1,9 @@
 package day1
 
-import java.io.File
 
-class day1 {
+class solution {
 
     private val inputFilePath = "src/main/kotlin/day1/input.txt"
-
-    private fun readFile(): List<String> {
-        return File(inputFilePath).readLines()
-    }
 
     private fun splitInputByElves(ungroupedData: List<String>): List<List<Int>> {
         val groups = mutableListOf<MutableList<Int>>()
@@ -30,7 +25,7 @@ class day1 {
 
     fun part1() { // 73211
 
-        val result = splitInputByElves(readFile())
+        val result = splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
             .sortedDescending()
             .take(1)[0]
@@ -39,7 +34,7 @@ class day1 {
     }
 
     fun part2() { // 213958
-        val result = splitInputByElves(readFile())
+        val result = splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
             .sortedDescending()
             .take(3)
