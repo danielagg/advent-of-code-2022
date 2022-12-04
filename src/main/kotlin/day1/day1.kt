@@ -4,39 +4,47 @@ import java.io.File
 
 class day1 {
 
-    fun part1() {
-        var tempSum = 0
-        val groups = mutableListOf<Int>()
+    private val inputFilePath = "src/main/kotlin/day1/input.txt"
 
-        File("src/main/kotlin/day1/input.txt")
-            .forEachLine {
-                if(it.isNotBlank()) {
-                    tempSum += it.toInt()
-                } else {
-                    groups.add(tempSum)
-                    tempSum = 0
-                }
-            }
-
-        groups.sortDescending()
-        println(groups[0])
+    private fun readFile(): List<String> {
+        return File(inputFilePath).readLines()
     }
 
-    fun part2() {
-        var tempSum = 0
-        val groups = mutableListOf<Int>()
+    private fun splitInputByElves(ungroupedData: List<String>): List<List<Int>> {
+        val groups = mutableListOf<MutableList<Int>>()
 
-        File("src/main/kotlin/day1/input.txt")
-            .forEachLine {
+        // initiate 1st entry
+        groups.add(mutableListOf())
+
+        ungroupedData
+            .map {
                 if(it.isNotBlank()) {
-                    tempSum += it.toInt()
+                    groups.last().add(it.toInt())
                 } else {
-                    groups.add(tempSum)
-                    tempSum = 0
+                    groups.add(mutableListOf())
                 }
             }
 
-        groups.sortDescending()
-        println(groups.take(3).sum())
+        return groups
+    }
+
+    fun part1() { // 73211
+
+        val result = splitInputByElves(readFile())
+            .map { it.sum() }
+            .sortedDescending()
+            .take(1)[0]
+
+        println(result)
+    }
+
+    fun part2() { // 213958
+        val result = splitInputByElves(readFile())
+            .map { it.sum() }
+            .sortedDescending()
+            .take(3)
+            .sum()
+
+        println(result)
     }
 }
