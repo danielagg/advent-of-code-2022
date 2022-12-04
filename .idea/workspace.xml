@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 2 naive">
+    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 2 improved">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/input_full.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/solution.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day2/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day2/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +46,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/danielagg/hobby-projects/advent-of-code-2022/src/main/kotlin/day2"
+    "last_opened_file_path": "/Users/danielagg/hobby-projects/advent-of-code-2022/src/main/kotlin/day3"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/day3" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/day2" />
     </key>
   </component>
@@ -108,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670155721579</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="day 2 improved">
+      <created>1670156298326</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670156298326</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +137,7 @@
     <MESSAGE value="day 1 naive" />
     <MESSAGE value="day 1 improved" />
     <MESSAGE value="day 2 naive" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 2 naive" />
+    <MESSAGE value="day 2 improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 2 improved" />
   </component>
 </project>
