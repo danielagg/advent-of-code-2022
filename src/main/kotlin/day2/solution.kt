@@ -2,13 +2,10 @@ package day2
 
 class solution {
 
-    // The first column is what your opponent is going to play: A for Rock, B for Paper, and C for Scissors.
-
-    // The score for a single round is the score for the shape you selected (1 for Rock, 2 for Paper, and 3 for Scissors)
-    // plus the score for the outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
     private val inputFilePath = "src/main/kotlin/day2/input.txt"
 
-    private fun getValueByPlayedEntry(entry: Char): Int {
+    private fun getValueOfPlayedEntry(entry: Char): Int {
+        // X for Rock and is worth 1, Y for Paper and is worth 2, and Z for Scissors and is worth 3
         return when (entry) {
             'X' -> 1
             'Y' -> 2
@@ -17,61 +14,64 @@ class solution {
         }
     }
 
-    private fun getValueByWinOrLoss_Part1(mine: Char, opponent: Char): Int {
+    private fun getValueOfGameOutComeByPlayedEntries(myEntry: Char, opponentEntry: Char): Int {
+        // map of all game outcomes, with their corresponding score
         val gameOutcome = mapOf(
             "XA" to 3, "XB" to 0, "XC" to 6,
             "YA" to 6, "YB" to 3, "YC" to 0,
             "ZA" to 0, "ZB" to 6, "ZC" to 3,
         )
 
-        return gameOutcome["$mine$opponent"]!!
+        return gameOutcome["$myEntry$opponentEntry"]!!
     }
 
-    // The second column is what I play, X for Rock, Y for Paper, and Z for Scissors.
-    fun part1() { // 13268
-        var result = 0
-
-        Utils.readFile(inputFilePath)
-            .map {
-                val opponent = it[0]
-                val mine = it[2]
-
-                result += getValueByPlayedEntry(mine)
-                result += getValueByWinOrLoss_Part1(mine, opponent)
-            }
-
-        println(result)
+    private fun getValueOfGameOutComeByExpectedOutcome(expectedOutcome: Char): Int {
+        return when (expectedOutcome) {
+            'X' -> 0 // loss
+            'Y' -> 3 // draw
+            'Z' -> 6 // win
+            else -> -1 // impossible
+        }
     }
 
-    private fun getValueByWinOrLoss_Part2(opponent: Char, expectedGameStatus: Char): Int {
-        // eg. AX means, opponent plays rock, and we need to lose --> we play scissors --> scissor gives us 3 points
-        // 1 for Rock, 2 for Paper, and 3 for Scissors
-        // A for Rock, B for Paper, and C for Scissors.
-        // X for lose, Y for draw, and Z for win.
+    private fun getScoreOfPlayedEntry(expectedOutcome: Char, opponentEntry: Char): Int {
+        // AX --> opponent plays A (rock), we expect a loss (X), therefore we need to play scissors, which is worth 3 points
+        // AY --> opponent plays A (rock), we expect a draw (Y), therefore we need to play rock, which is worth 1 point
         val gameOutcome = mapOf(
             "AX" to 3, "AY" to 1, "AZ" to 2,
             "BX" to 1, "BY" to 2, "BZ" to 3,
             "CX" to 2, "CY" to 3, "CZ" to 1,
         )
 
-        return gameOutcome["$opponent$expectedGameStatus"]!!
+        return gameOutcome["$opponentEntry$expectedOutcome"]!!
     }
 
-    // The second column is what I need to do: X for lose, Y for draw, and Z for win.
-    fun part2() {
+    fun part1() { // 13268
         var result = 0
 
         Utils.readFile(inputFilePath)
             .map {
-                val opponent = it[0]
-                val expectedGameStatus = it[2]
+                val playedEntryByOpponent = it[0]
+                val playedEntryByMyself = it[2]
 
-                when (expectedGameStatus) {
-                    'X' -> result += 0
-                    'Y' -> result += 3
-                    'Z' -> result += 6
-                }
-                result += getValueByWinOrLoss_Part2(opponent, expectedGameStatus)
+                result += getValueOfPlayedEntry(playedEntryByMyself)
+                result += getValueOfGameOutComeByPlayedEntries(playedEntryByMyself, playedEntryByOpponent)
+            }
+
+        println(result)
+    }
+
+
+    fun part2() { // 15508
+        var result = 0
+
+        Utils.readFile(inputFilePath)
+            .map {
+                val playedEntryByOpponent = it[0]
+                val expectedGameOutcome = it[2]
+
+                result += getValueOfGameOutComeByExpectedOutcome(expectedGameOutcome)
+                result += getScoreOfPlayedEntry(expectedGameOutcome, playedEntryByOpponent)
             }
 
         println(result)
