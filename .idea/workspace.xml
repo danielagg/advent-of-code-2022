@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 2 improved">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/input_full.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day3/solution.kt" afterDir="false" />
+    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 3">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day4/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day4/input_full.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day4/solution.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670156298326</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="day 3">
+      <created>1670157921294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670157921294</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +145,7 @@
     <MESSAGE value="day 1 improved" />
     <MESSAGE value="day 2 naive" />
     <MESSAGE value="day 2 improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 2 improved" />
+    <MESSAGE value="day 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 3" />
   </component>
 </project>

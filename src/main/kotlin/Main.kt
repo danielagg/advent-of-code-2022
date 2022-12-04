@@ -12,4 +12,9 @@ fun main() {
     println("Day 3:")
     day3.solution().part1()
     day3.solution().part2()
+
+    println("-------------------")
+    println("Day 4:")
+    day4.solution().part1()
+    day4.solution().part2()
 }
