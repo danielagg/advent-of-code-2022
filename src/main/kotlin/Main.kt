@@ -17,4 +17,9 @@ fun main() {
     println("Day 4:")
     day4.solution().part1()
     day4.solution().part2()
+
+    println("-------------------")
+    println("Day 5:")
+    day5.solution().part1()
+    day5.solution().part2()
 }

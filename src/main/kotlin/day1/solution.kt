@@ -23,17 +23,17 @@ class solution {
         return groups
     }
 
-    fun part1() { // 73211
+    fun part1(): Int {
 
         val result = splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
-            .sortedDescending()
-            .take(1)[0]
+            .maxOf { it }
 
         println(result)
+        return result
     }
 
-    fun part2() { // 213958
+    fun part2(): Int {
         val result = splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
             .sortedDescending()
@@ -41,5 +41,6 @@ class solution {
             .sum()
 
         println(result)
+        return result
     }
 }
