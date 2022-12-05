@@ -46,7 +46,7 @@ class solution {
         return gameOutcome["$opponentEntry$expectedOutcome"]!!
     }
 
-    fun part1() { // 13268
+    fun part1(): Int {
         var result = 0
 
         Utils.readFile(inputFilePath)
@@ -58,11 +58,11 @@ class solution {
                 result += getValueOfGameOutComeByPlayedEntries(playedEntryByMyself, playedEntryByOpponent)
             }
 
-        println(result)
+        return result
     }
 
 
-    fun part2() { // 15508
+    fun part2(): Int {
         var result = 0
 
         Utils.readFile(inputFilePath)
@@ -74,6 +74,6 @@ class solution {
                 result += getScoreOfPlayedEntry(expectedGameOutcome, playedEntryByOpponent)
             }
 
-        println(result)
+        return result
     }
 }

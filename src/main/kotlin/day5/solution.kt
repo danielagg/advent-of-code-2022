@@ -46,7 +46,7 @@ class solution {
         return crates
     }
 
-    fun part1() { // TGWSMRBPN
+    fun part1(): String {
         val lines = Utils.readFile(inputFilePath)
         var crates = getCreates(lines)
 
@@ -60,10 +60,10 @@ class solution {
                 crates = performMove(crates, move, from - 1, to - 1)
             }
 
-        println(crates.filter { it.any() }.map { it.first() }.joinToString(""))
+        return crates.filter { it.any() }.map { it.first() }.joinToString("")
     }
 
-    fun part2() { // TZLTLWRNF
+    fun part2(): String {
         val lines = Utils.readFile(inputFilePath)
         var crates = getCreates(lines)
 
@@ -77,6 +77,7 @@ class solution {
                 crates = performMoveV2(crates, move, from - 1, to - 1)
             }
 
-        println(crates.filter { it.any() }.map { it.first() }.joinToString(""))
+        val result = crates.filter { it.any() }.map { it.first() }.joinToString("")
+        return result
     }
 }

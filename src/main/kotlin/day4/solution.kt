@@ -19,7 +19,7 @@ class solution {
         return xStart <= yStart && xEnd >= yStart
     }
 
-    fun part1() { // 453
+    fun part1(): Int {
         var result = 0
 
         Utils.readFile(inputFilePath)
@@ -35,10 +35,10 @@ class solution {
                 }
             }
 
-        println(result)
+        return result
     }
 
-    fun part2() { // 919
+    fun part2(): Int {
         var result = 0
 
         Utils.readFile(inputFilePath)
@@ -54,6 +54,6 @@ class solution {
                 }
             }
 
-        println(result)
+        return result
     }
 }

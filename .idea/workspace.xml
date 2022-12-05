@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 4">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day5/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day5/input_full.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day5/solution.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/day1/day1Tests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a5486142-010e-4d8a-9e6f-7c18fcab76ec" name="Changes" comment="day 5 naive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/day1/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day1/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day2/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day2/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day3/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day3/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day4/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day4/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day5/input_full.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day5/solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day5/solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/day1/day1Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/Tests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +56,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/danielagg/hobby-projects/advent-of-code-2022/src/main/kotlin/day5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/danielagg/hobby-projects/advent-of-code-2022/src/main/kotlin/day5&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/day5" />
@@ -74,11 +74,14 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="day1" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.Tests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -88,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="day1Tests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -101,7 +104,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;day1.day1Tests&quot;" />
+            <option value="&quot;Tests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,13 +123,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Gradle.day1Tests (1)" />
+      <item itemvalue="Gradle.Tests" />
       <item itemvalue="Kotlin.MainKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Gradle.day1Tests (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670159554943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="day 5 naive">
+      <created>1670271085737</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670271085738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +212,7 @@
     <MESSAGE value="day 2 improved" />
     <MESSAGE value="day 3" />
     <MESSAGE value="day 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 4" />
+    <MESSAGE value="day 5 naive" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 5 naive" />
   </component>
 </project>

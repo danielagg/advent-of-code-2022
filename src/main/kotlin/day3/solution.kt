@@ -41,7 +41,7 @@ class solution {
         return if(letter.isLowerCase()) lowerCaseValue else upperCaseValue
     }
 
-    fun part1() { // 7850
+    fun part1(): Int {
         var result = 0
 
         Utils.readFile(inputFilePath)
@@ -55,10 +55,10 @@ class solution {
                 }
             }
 
-        println(result)
+        return result
     }
 
-    fun part2() { // 2581
+    fun part2(): Int {
         var result = 0
         val lines = Utils.readFile(inputFilePath)
 
@@ -73,7 +73,7 @@ class solution {
             }
         }
 
-        println(result)
+        return result
     }
 
 }

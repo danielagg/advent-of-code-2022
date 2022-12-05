@@ -1,5 +1,6 @@
 package day1
 
+import Utils
 
 class solution {
 
@@ -24,23 +25,16 @@ class solution {
     }
 
     fun part1(): Int {
-
-        val result = splitInputByElves(Utils.readFile(inputFilePath))
+        return splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
             .maxOf { it }
-
-        println(result)
-        return result
     }
 
     fun part2(): Int {
-        val result = splitInputByElves(Utils.readFile(inputFilePath))
+        return splitInputByElves(Utils.readFile(inputFilePath))
             .map { it.sum() }
             .sortedDescending()
             .take(3)
             .sum()
-
-        println(result)
-        return result
     }
 }
